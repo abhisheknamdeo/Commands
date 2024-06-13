@@ -3,7 +3,7 @@ To install Docker Compose on a Red Hat Linux machine, you can follow these steps
 sudo yum update
 
 2. Install Docker (if it's not already installed):
-sudo yum install docker 
+https://docs.docker.com/engine/install/rhel/ 
 
 3. Start and enable the Docker service:
 sudo systemctl start docker 
@@ -29,5 +29,23 @@ docker-compose ps -a
 If you're looking for the Docker Compose files themselves (the docker-compose.yml files), you can search for them in your filesystem. Typically, Docker Compose projects are organized in directories, and each directory contains a docker-compose.yml file defining the services for that project. You can use commands like find or locate to search for these files:
 find / -name docker-compose.yml
 Replace / with the directory where you suspect your Docker Compose files might be located if you want to limit the search scope.
+
+
+--------------------------------------------------------------------------------------------------
+
+
+docker ps //To show only running containers
+docker ps -a //To show all containers
+docker ps -l //To show the latest created container
+docker ps -n=-1  //To show n last created containers
+docker ps -s  //To display total file sizes
+
+From <https://intellipaat.com/community/22348/how-to-list-containers-in-docker> 
+
+docker container ls //To list all the running containers.
+docker container ls -a //To clean them all,
+docker rm $(docker ps -aq) //To list all the containers created irrespective of its state.
+
+From <https://intellipaat.com/community/22348/how-to-list-containers-in-docker> 
 
   
